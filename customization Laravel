@@ -1,0 +1,212 @@
+<?php
+// in App\Console\Commands
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
+
+class GenerateModel extends Command
+{
+    protected $signature = 'generate';
+    protected $description = 'Generate a new model';
+//===============================================Model=======================
+    public function handle()
+    {
+        // the model file
+        $modelName = $this->ask('Enter the model name');
+        $attributes = [];
+
+        while (true) {
+            $attributeName = $this->ask('Enter an attribute name (leave empty to finish)');
+            if (empty($attributeName)) {
+                break;
+            }
+
+            $attributeType = $this->ask('Enter the data type for \'' . $attributeName . '\'');
+            $attributes[] = compact('attributeName', 'attributeType');
+        }
+
+        Artisan::call("make:model {$modelName} ");
+
+        // Generate the attributes string for the model
+        $attributesString = '';
+        foreach ($attributes as $attribute) {
+            $attributesString .= "        '{$attribute['attributeName']}'"."," ;
+        }
+
+        $modelContent = <<<EOD
+        <?php
+
+        namespace App\Models;
+
+        use Illuminate\Database\Eloquent\Factories\HasFactory;
+        use Illuminate\Database\Eloquent\Model;
+
+        class {$modelName} extends Model
+        {
+            use HasFactory;
+
+            protected \$fillable = [
+        {$attributesString}
+            ];
+        }
+        EOD;
+
+
+        // Define the path where the model file will be created
+        $modelPath = "app/Models/{$modelName}.php";
+
+        // Write the content to the model file
+        file_put_contents($modelPath, $modelContent);
+        $this->info('Model \'' . $modelName . '\' created and populated with attributes.');
+
+      //===================================================MIGRATION==============================================
+
+            $migrationName = date('Y_m_d_His') .  '_create_' . strtolower($modelName) . 's_table';
+
+        // Use Artisan to generate the migration with the custom name
+        // Artisan::call("make:migration {$migrationName}");
+         $tableName=strtolower(($modelName).'s');
+        $migrationContent= <<<EOD
+        <?php
+
+        use Illuminate\Database\Migrations\Migration;
+        use Illuminate\Database\Schema\Blueprint;
+        use Illuminate\Support\Facades\Schema;
+
+        return new class extends Migration
+        {
+            /**
+             * Run the migrations.
+             */
+            public function up(): void
+            {
+        Schema::create('$tableName', function (Blueprint \$table) {
+
+
+        EOD;
+        foreach ($attributes as $attribute) {
+            $migrationContent .= <<<EOD
+                    \$table->{$attribute['attributeType']}('{$attribute['attributeName']}');
+
+        EOD;
+        }
+        $migrationContent .= <<<EOD
+            \$table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('{$modelName}');
+    }
+};
+EOD;
+        $migrationPath="database/migrations/{$migrationName}.php";
+        file_put_contents($migrationPath, $migrationContent);
+
+        echo "Migration '{$migrationName}' created following Laravel convention.\n";
+
+        //=======================================================Controller========================
+        $controllerName=$modelName . 'Controller.php';
+        // The Controller File
+$controllerContent = <<<EOD
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\\{$modelName};
+
+class {$modelName}Controller extends Controller
+{
+    public function index()
+    {
+        \$items = {$modelName}::all();
+        return response()->json(\$items);
+    }
+
+    public function store(Request \$request)
+    {
+        \$request->validate([
+EOD;
+
+// Add validation rules for each attribute dynamically
+foreach ($attributes as $attribute) {
+    $controllerContent .= "            '{$attribute['attributeName']}' => 'required',\n";
+}
+
+$controllerContent .= <<<EOD
+        ]);
+
+        \$item = new {$modelName}(\$request->all());
+        \$item->save();
+
+        return response()->json(\$item, 201);
+    }
+
+    public function show(\$id)
+    {
+        \$item = {$modelName}::findOrFail(\$id);
+        return response()->json(\$item);
+    }
+
+    public function update(Request \$request, \$id)
+    {
+        \$request->validate([
+EOD;
+
+// Add validation rules for each attribute dynamically
+foreach ($attributes as $attribute) {
+    $controllerContent .= "            '{$attribute['attributeName']}' => 'required',\n";
+}
+
+$controllerContent .= <<<EOD
+        ]);
+
+        \$item = {$modelName}::findOrFail(\$id);
+        \$item->update(\$request->all());
+
+        return response()->json(\$item, 200);
+    }
+
+    public function destroy(\$id)
+    {
+        \$item = {$modelName}::findOrFail(\$id);
+        \$item->delete();
+
+        return response()->json(['message' => '{$modelName} deleted successfully']);
+    }
+}
+EOD;
+
+// Define the path where the controller file will be created
+$controllerPath = "app/Http/Controllers/{$modelName}Controller.php";
+
+// Write the content to the controller file
+file_put_contents($controllerPath, $controllerContent);
+
+$this->info('Controller \'' . $modelName . 'Controller\' created and populated with code.');
+$routeName=$modelName.'s';
+$ctrRoute=$modelName.'Controller';
+$routeContent = "Route::resource('$routeName', $ctrRoute::class)->except(['create', 'edit']);";
+$routePath='routes/api.php';
+// Read the existing content of the file
+$existingContent = file_get_contents($routePath);
+
+// Append the new content
+$newContent =   $existingContent . PHP_EOL.$routeContent ;
+
+// Write the combined content back to the file
+file_put_contents($routePath, $newContent);
+
+
+
+    }
+}
+
