@@ -6,7 +6,7 @@
 <img align="right" alt="Coding" width="400" src="https://images.unsplash.com/photo-1675151638911-b32b354c4e4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" />
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=soukaina&label=Profile%20views&color=0e75b6&style=flat" alt="soukaina" /> </p>
 
-- 🌱 I’m currently learning **Angular**
+- 🌱 I’m A .Net & Angular Developer 
 
 - 👨‍💻 All of my projects are available at [https://smourabit.github.io/Personal_portfolio/](https://smourabit.github.io/Personal_portfolio/)
 
