@@ -8,7 +8,7 @@
 
 - 🌱 I’m A .Net & Angular Developer 
 
-- 👨‍💻 All of my projects are available at [https://smourabit.github.io/Personal_portfolio/](https://smourabit.github.io/Personal_portfolio/)
+- 👨‍💻 All of my projects are available at [https://soukaina203.github.io/Portfolio/](https://soukaina203.github.io/Portfolio/)
 
 - 📫 How to reach me **soukainamourabit@outlook.fr**
 
