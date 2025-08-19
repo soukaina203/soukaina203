@@ -1,23 +1,71 @@
 
+<header align="left">
 
-<h1 align="center">Hi 👋, I'm Soukaina</h1>
-<h3 align="center">A passionate FullStack developer from Morocco</h3>
 
-<img align="right" alt="Coding" width="400" src="https://images.unsplash.com/photo-1675151638911-b32b354c4e4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" />
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=soukaina&label=Profile%20views&color=0e75b6&style=flat" alt="soukaina" /> </p>
+<table align="left">
+  <tr >
+    <th>
+      <img align="center" width="24" height="24" src="https://img.icons8.com/material-outlined/24/EBEBEB/globe--v1.png" alt="globe--v1"/>
+      <a href="https://www.jfmartinz.dev/" />  My Portfolio  
+    </th> 
+    <th>
+   <img align="center" width="24" height="24" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>   
+  <a href="https://www.linkedin.com/in/jfmartinz/" />   LinkedIn
+    </th> 
+        <th>
+  <a href="https://dev.to/jfmartinz" /> 
+  <img align="center" width="24" height="24" src="https://img.icons8.com/color/48/dev-community.png" alt="dev-community"/>  
+  Dev.to blog
+    </th> 
+     <th>
+       <img align="center" width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png" alt="external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo"/>
+        <a href="https://leetcode.com/u/jfmartinz/">LeetCode</a>
+    </th>
+     <th>
+       <img width="24" height="24" align="center" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v1.png" alt="twitterx--v1"/>
+      <a href="https://twitter.com/jfmartinz" />   𝕏 (Twitter)
+    </th> 
+  </tr>
+  
+</table>
+</section>
+</header>  
+<section>  
+<br>
+<br>
 
-- 🌱 I’m A .Net & Angular Developer 
+### About me ☕
+- Studies Computer Science at [University of Nueva Caceres](https://unc.edu.ph/).
+- Loves to contribute to Open-Source. [GSSOC](https://gssoc.girlscript.tech/), [SWOC](https://www.socialwinterofcode.com/), and Hacktoberfest.
+- Occasionally write blogs. Read my first [blog](https://dev.to/jfmartinz/beginners-guide-to-open-source-start-your-open-source-journey-470l)
+- Hobbies: reading, calisthenics, and listening to music
+</section>
 
-- 👨‍💻 All of my projects are available at [https://soukaina203.github.io/Portfolio/](https://soukaina203.github.io/Portfolio/)
 
-- 📫 How to reach me **soukainamourabit@outlook.fr**
+---
+### Latest Blog Posts 📍
+<!-- BLOG-POST-LIST:START -->
+- [Level Up Your GitHub Profile With These 20+ Amazing Resources! 🚀](https://dev.to/jfmartinz/level-up-your-github-profile-with-these-20-amazing-resources-524p)
+- [My Hacktoberfest 2024 Journey—reflection](https://dev.to/jfmartinz/my-hacktoberfest-2024-journey-reflection-1fol)
+- [Hacktoberfest 2024: Everything You Need to Know!](https://dev.to/jfmartinz/hacktoberfest-2024-everything-you-need-to-know-29h7)
+- [Beginner’s Guide to Open-Source. Start your Open-Source Journey 🚀](https://dev.to/jfmartinz/beginners-guide-to-open-source-start-your-open-source-journey-470l)
+<!-- BLOG-POST-LIST:END -->
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/soukaina mourabit" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="soukaina mourabit" height="30" width="40" /></a>
-</p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" alt="laravel" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://redux.js.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+<br>
 
+<table>
+<tr>
+  <td>
+    <img src="https://github-readme-stats.vercel.app/api?username=jfmartinz&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=false&count_private=false" alt="GitHub Stats" title="Github Stats"/>  
+
+  </td>
+  <td>
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=jfmartinz&theme=tokyonight&hide_border=true" alt="Github Streak" title="Github Streak"/> 
+  </td>
+</tr>
+</table>
+</section>
+
+[@jfmartinz's Holopin badges](https://holopin.io/@jfmartinz)
 
